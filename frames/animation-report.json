@@ -1,0 +1,81 @@
+{
+  "hero run": {
+    "frames": 24,
+    "fps": 8,
+    "unchangedPixels": true,
+    "transparent": true,
+    "sourceBootBounds": [
+      224,
+      224,
+      224,
+      224,
+      225,
+      224,
+      225,
+      224,
+      224,
+      225,
+      225,
+      225,
+      224,
+      224,
+      224,
+      225,
+      224,
+      225,
+      225,
+      224,
+      224,
+      225,
+      225,
+      224
+    ],
+    "renderedBottomErrorPx": 0,
+    "scale": 0.9
+  },
+  "hero attack": {
+    "frames": 10,
+    "fps": 9,
+    "unchangedPixels": true,
+    "transparent": true,
+    "sourceBootBounds": [
+      228,
+      228,
+      228,
+      228,
+      228,
+      228,
+      228,
+      228,
+      228,
+      228
+    ],
+    "renderedBottomErrorPx": 0,
+    "scale": 0.9
+  },
+  "knight run": {
+    "frames": 3,
+    "fps": 6,
+    "unchangedPixels": true,
+    "transparent": true,
+    "sourceBootBounds": [
+      644,
+      644,
+      644
+    ],
+    "renderedBottomErrorPx": 0,
+    "scale": 0.32
+  },
+  "knight attack": {
+    "frames": 2,
+    "fps": 6,
+    "unchangedPixels": true,
+    "transparent": true,
+    "sourceBootBounds": [
+      644,
+      644
+    ],
+    "renderedBottomErrorPx": 0,
+    "scale": 0.32
+  }
+}

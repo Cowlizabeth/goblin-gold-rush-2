@@ -1,0 +1,45 @@
+{
+  "passed": 16,
+  "checks": [
+    {
+      "path": "butcher",
+      "seconds": 185.21666666666255,
+      "gold": 672,
+      "hp": 100,
+      "kills": 49,
+      "jumps": 51
+    },
+    "Reachable full route: butcher",
+    {
+      "path": "hunter",
+      "seconds": 197.7916666666511,
+      "gold": 672,
+      "hp": 100,
+      "kills": 49,
+      "jumps": 48
+    },
+    "Reachable full route: hunter",
+    {
+      "path": "plague",
+      "seconds": 180.2166666666671,
+      "gold": 672,
+      "hp": 100,
+      "kills": 49,
+      "jumps": 50
+    },
+    "Reachable full route: plague",
+    "No-input route cannot bypass mandatory platforming",
+    "Short vs held jump",
+    "Fury retained indefinitely away from enemies",
+    "Fury requires charge and cannot refresh",
+    "Overlay freezes time and physics",
+    "Exclusive weapon choice",
+    "Clash solid contact and jump escape",
+    "Attack ends and returns to run",
+    "Buffered landing triggers next jump",
+    "Coyote time permits jump after edge",
+    "Spikes damage grounded player",
+    "Jumping across a living boss cannot softlock the arena",
+    "Boss shockwave can be avoided with a jump"
+  ]
+}

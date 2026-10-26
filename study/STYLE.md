@@ -1,0 +1,3 @@
+# Visual contract
+Approved original pixel cutout art: dark contours, cream rims, scarlet cloak, steel and gold accents. The hero frames and knight frames are byte-for-pixel preserved. No images were generated. Background wall, distant formations (0.29 parallax), middle formations (0.48), ceiling (0.65) and terrain (1.0) have permanent world IDs. Opaque formations extend below the floor; the floor occludes their bases. Platforms use approved pillars/arches with a visible stone cap that matches the landing surface.
+Hero run 24 frames / 8 FPS, attack 10 frames / 9 FPS, impact frame 4. Knight run 3 frames and attack 2 frames at 6 FPS. Fixed actor scale. Per-frame source alpha bottom anchors to the physical foot position. No synthetic rigs.

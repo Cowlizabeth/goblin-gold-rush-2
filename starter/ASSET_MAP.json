@@ -1,0 +1,830 @@
+{
+  "name": "Goblin Gold Rush 2.0",
+  "mode": "browser/WebGL2",
+  "art_style": "dark original pixel-art cutout paper puppet, dark outline, cream rim",
+  "sources": {},
+  "assets": {
+    "assets/recovered/ui/menu_runner.png": {
+      "bytes": 5261,
+      "sha256": "99b6cc31c5611dd456fc298c9aa610d187d19458fa0bc58e0e935fc708625bd0",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/ui/coin.png": {
+      "bytes": 218,
+      "sha256": "8f211f4fda03e763237da8959706ebe3b6b1229f5b91b74ba063a5ace2fa63b4",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/characters/runner.png": {
+      "bytes": 1535,
+      "sha256": "55386d8269ab18af890f0066cc1457ef63d81091f89f4dcedf560e8b6f75135c",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/knight_paper.png": {
+      "bytes": 31046,
+      "sha256": "8d96af8cde2db846cbf0f7fbd0378ea3744e2c8f970df6c10aa22c7f064ecee5",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/runner_paper.png": {
+      "bytes": 29632,
+      "sha256": "d9819089b4cfb0589876eaf65e7c66bcee4eafd9ee461f07667fef3d7aaec6e1",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/foliage.png": {
+      "bytes": 925,
+      "sha256": "aaae7d5d1e8afd5b36445b44e28fd7f8e7e71bcea7c36d0a5b34ba873a133bef",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_wall.webp": {
+      "bytes": 389204,
+      "sha256": "fcded61f38056cc251867a5ca50a95ae6b00ee3854cbfb3bb231811d01ba2c46",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/grass.png": {
+      "bytes": 673,
+      "sha256": "b7cb58f7c00029e4ba8be1bbf7521081bf6ad66e10bd1ee2823f0f203ba55a52",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/runner.png": {
+      "bytes": 109442,
+      "sha256": "205b48d8bd4db019e3d574e2023daf875180731f4b36671f2651f58bf992672e",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/support_ricochet.png": {
+      "bytes": 3050,
+      "sha256": "5875e3dea33aa19c80c6ed6d1ed12ededcfbd191517edd397785a07e0e188bc0",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/guard.png": {
+      "bytes": 10250,
+      "sha256": "43c187a8667b19121c6d2246ab555f7d16d28ceebe7017b1eeca4d2e12bbeb8a",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/wagon.png": {
+      "bytes": 7532,
+      "sha256": "254e9e36d0f6a7950c24c97cf83f3a8abdc0b89b8c1e9e5fb8176eb551b358a7",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/peasant.png": {
+      "bytes": 8776,
+      "sha256": "125b715b297de52cbfd51cb82940e1791f55242434da837a277c042548552ae8",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/runner_2d.png": {
+      "bytes": 465016,
+      "sha256": "fd38ffca17e9f7eb970f99e62832ca37ff9d94e7de4f1c4027e2283cae55c84c",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/support_ignite.png": {
+      "bytes": 3196,
+      "sha256": "49fd0675a701baaa13a5fb9ef4f7db34ab63db03b012a931085f855aad88da39",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/hunter.png": {
+      "bytes": 9388,
+      "sha256": "d0677f11bf269ba262d5888b57078384b2cd6a93abee4fff98bc2a5e5a5ad048",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/coin.png": {
+      "bytes": 708,
+      "sha256": "68a0be28c76a4e2f5e20d5b1b9f782848e9d804325f7d4363a2230daacf0ec24",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/path.png": {
+      "bytes": 600,
+      "sha256": "7903ef6e3c0c8611b3703c735fc22f57a19190ae9d919035764505d631c00474",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/support_split.png": {
+      "bytes": 2763,
+      "sha256": "8bc41e344e707c32a213d517ac092d17499cfe9fabd48f135a720b855214c785",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/enemies/human_guard.png": {
+      "bytes": 355,
+      "sha256": "3a82aec207ff6baa45b7f4dd04c1715e907be7a9d0484d003008fc424deea1e5",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/enemies/human_hunter.png": {
+      "bytes": 332,
+      "sha256": "e9fafab02171c9a2778849a5caf15fec30820e38faaf1bae4ebee3bf5f66980a",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v3/platforms.png": {
+      "bytes": 1825726,
+      "sha256": "82f3c6414e2c656c2df7076c25f70a5ea0ada32cb75470078cab343c8819d718",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v3/poison.png": {
+      "bytes": 1992539,
+      "sha256": "230588073e5a4230022d053d7f0c3a9793d3df28024d3b7807994f6ed8099658",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v3/skills.png": {
+      "bytes": 2217382,
+      "sha256": "e57118b0ed8d9a5516242ddaabaf6d7334abbd8a49035a25825ba77e8d88a074",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/rocks_crystal_blue.png": {
+      "bytes": 97065,
+      "sha256": "85979cf108a0f34f0ccbf5a326558a10c3b891e0c6065fc2cd5c3d6d89d50f80",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/meter_inactive.png": {
+      "bytes": 62062,
+      "sha256": "bfcca577477e576143fa5f9c1a11395be9d8fb2ae35ce8f97fe0d7a135e27761",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/gold_sack.png": {
+      "bytes": 143870,
+      "sha256": "d277aca27633e112a32b93cbf6de6c3417e6d7feee91369ffdb302594c221dc1",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/rocks_spikes.png": {
+      "bytes": 78173,
+      "sha256": "f140bb40a9ecac2168b24faeb641d8e3134861d0d402456781b12cc89ddabf4a",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/skill_bleed.png": {
+      "bytes": 88277,
+      "sha256": "f47d098acfedad6915337e986a7b53f3b2d81c9837f453be167c8ad6e2a92b66",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/ceiling_wide_b.png": {
+      "bytes": 75003,
+      "sha256": "674c5d07d40b4f314c8e0a4ed94d2c2fc91eca088907c45c1af3e738f3018d7e",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/skill_blades.png": {
+      "bytes": 99122,
+      "sha256": "e41b552f6fc0f662775b042f22056f029685b70b0bdb4b2a9769066400b48de1",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/stalagmite_short_a.png": {
+      "bytes": 95804,
+      "sha256": "eb2b10a4cb485675cd873b5fbdd7e9cb4175c769bb74b6eba7c68c670b666d30",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/pebbles_small_c.png": {
+      "bytes": 53539,
+      "sha256": "74ee9fd703232c1241e4406cd3bf57b5c6a557389eb9dcc6913ffcbb14d2acea",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/upgrade_panel.png": {
+      "bytes": 299160,
+      "sha256": "2ad0962797adcef81af8d53b79e05a2560192fd4a30145d517ed6b119fb3fd55",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/rocks_pillar.png": {
+      "bytes": 78123,
+      "sha256": "d4406d75f371120cabb6c654f240951311da37dc5c951a7e96e083088b63efef",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/rocks_crystal_gold.png": {
+      "bytes": 84331,
+      "sha256": "b704f94eaa0cfe314f14f77e5c69ff7758715bae0d33962636c0f97d03778b42",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/rocks_lantern.png": {
+      "bytes": 62235,
+      "sha256": "a707edfe678b803a81fde0c7f957543a23668ce5b5dc4e1ec4deb9fb42106ef3",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/fury_button.png": {
+      "bytes": 99632,
+      "sha256": "7a8582a41203d251e6c94e795d0149a8fba56a1590350c3594a42194c8c3bb75",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/rocks_obstacle_b.png": {
+      "bytes": 80802,
+      "sha256": "9529e8f321f25d2918ae097a66354b78b90c8f6a6d18e5e7bba51da50e96e013",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/ceiling_ledge_a.png": {
+      "bytes": 110021,
+      "sha256": "d58168e88a0b0afee5df934c9e4fbfb753fa03c3007232fdd71b2fee01976370",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/fury_emblem.png": {
+      "bytes": 124130,
+      "sha256": "0afde244633dcca5986c9234ca4585796e0f95650cf48030d331c46884836283",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/upgrade_card_a.png": {
+      "bytes": 136600,
+      "sha256": "aa9a85f80faee3fd7b4b7e88b6cd71e1bc64401c47edb64e307793f2a9b4ccc8",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/cave_arch.png": {
+      "bytes": 187924,
+      "sha256": "1e1d2cfef23926c870a29d82a65a07fd448bc2c68315a86c1341d8fce9b3de45",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/perk_slot_round.png": {
+      "bytes": 57755,
+      "sha256": "f5cb58ef6a4f3633c3981a4d44ef7ebd6d37f70ec6a54f84faefe3f67f908a02",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/upgrade_card_b.png": {
+      "bytes": 136977,
+      "sha256": "f4992f85160094db1793b7b73dae64aace38732b223698964b8494c7b103c54a",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/upgrade_card_c.png": {
+      "bytes": 139620,
+      "sha256": "beeab2173570f7c8a5eb536400576df6888f6f08a7c4886ec3eb6b20cc25f486",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/rocks_decor_b.png": {
+      "bytes": 92322,
+      "sha256": "a5a6f52a85c578cd69ad967006b00bd4d4869d99dc00b5d076d63430e3a10df6",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/ceiling_sharp_a.png": {
+      "bytes": 90812,
+      "sha256": "57e927066d0d1768bd58cfa7750b8ebd202c9ee1f3538c7fa2d8a288727e7612",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/gold_rush_banner.png": {
+      "bytes": 219022,
+      "sha256": "84ebdaaca1908d2a44e09ca8dc4bd4fb456fbbc60842d0f2cd13eb150d40d048",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/button_gold.png": {
+      "bytes": 67758,
+      "sha256": "03a0af3d37b2e4b3e07f5bef7d5e5a96351172beea410736278124b7be4b73c6",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/pebbles_small_b.png": {
+      "bytes": 57526,
+      "sha256": "49c0b1c602719ba464e9be7fe72bad123853dda0cfa4aa632b9668f0de88c4d7",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/red_crystal.png": {
+      "bytes": 121703,
+      "sha256": "b3816cb22a1dffbcf965093c8d19532a7372c29434abf0b1bb9b3c8cbba87159",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/rocks_mushrooms.png": {
+      "bytes": 42649,
+      "sha256": "8acc6c3ea9aa893cf6d1e5c1c1b787254a5dced70442502a2a9da0e66c0fbf97",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/healing_potion.png": {
+      "bytes": 97283,
+      "sha256": "3d28581391f7c9d3235b50afe33875f0ed66701c6cecc9f4f96ab4c2e670eaa7",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/coin_front.png": {
+      "bytes": 40375,
+      "sha256": "c7d9823e98f310a23c30706184242e610e256dc906d3533bd205f969dfb46619",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/rocks_pointed_a.png": {
+      "bytes": 69386,
+      "sha256": "d1771bece753f7e745daf2c4a64f159614cd94011c1406d66a1684f148b0c6db",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/ceiling_sharp_b.png": {
+      "bytes": 101029,
+      "sha256": "96b731329f94b84e66ed7bf417888591a016d3bd86c26aeff6d821d79b49783f",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/rocks_decor_a.png": {
+      "bytes": 82077,
+      "sha256": "806c65613b2b9bdec738521e0a97b7f388c45f8797bb0c6fab9e05a4b8a3dff5",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/treasure_chest.png": {
+      "bytes": 101809,
+      "sha256": "770ba16f8f07beb6556b679d4b407b61946416ea02d77d41302c2193f6b9064b",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/rocks_bones.png": {
+      "bytes": 57279,
+      "sha256": "09261d324b1524f0e6b286b9a38fd601da98c3693785ac63ff477826b6a1659d",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/stalagmite_short_b.png": {
+      "bytes": 94100,
+      "sha256": "ba41614d72b00d3b7e3ce1c6bb3c7a8b06c9f60aebf25c81844fa5cae506e4df",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/stalagmite_wide_a.png": {
+      "bytes": 97978,
+      "sha256": "5169611667edf8c3ecdf88b2e7c26568efda7e5ff9c5f8db231bb3046327dd73",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/coin_spin_4.png": {
+      "bytes": 99192,
+      "sha256": "7ea7617f6f15c2deb749559232972e07e1544f2c6f1ce445a05c87790f22da2a",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/skill_greed.png": {
+      "bytes": 99312,
+      "sha256": "89b95f3a3d0cb95d476fb6de94bdfdc10c435fc35978e20e624a95557afa4d8f",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/coin_edge.png": {
+      "bytes": 24226,
+      "sha256": "b590a1421d2b46c2410a5522c66a9c27139c48e2b948026cf3d600bafe89f1b3",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/settings_icon.png": {
+      "bytes": 60266,
+      "sha256": "923cf782c2e1eba2f64aba6031b0e94b9fdcddd2ec74524e17fb3a504f432e26",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/coin_tilt.png": {
+      "bytes": 33274,
+      "sha256": "d79f756f197c371ad4af5b4b0f973b51dcf607a4d0d6733de03d84ac0e6b1d1b",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/stalagmite_tall_a.png": {
+      "bytes": 95368,
+      "sha256": "d1cd9e308e3797307472bb22d07ecd2dc501ca7b6f55f2b898da6ca27dac6a82",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/perk_slot_shield.png": {
+      "bytes": 56506,
+      "sha256": "7a1dbe152d01a51383439acd3b37253e492db28f6db2c4eed5596286d9592a83",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/rocks_obstacle_c.png": {
+      "bytes": 110250,
+      "sha256": "933e9abbbada97d940fd57561e4818bf711ffce1936547613129fc47f35a1fdd",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/healing_meat.png": {
+      "bytes": 101263,
+      "sha256": "06babfcd9f281222e162095539cb25a45970fd1b188c096ba3dd001b8e7b343e",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/rocks_obstacle_a.png": {
+      "bytes": 55550,
+      "sha256": "da9ced7b8e0b75a75e22324a3058a7f4825a237bddbfbff2411e0264026cd318",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/wall_right.png": {
+      "bytes": 129855,
+      "sha256": "f3415665ab82345d5b3335e8326fc21f8db87ef31b956b0bc2acf32eb25e1a2c",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/stalagmite_wide_b.png": {
+      "bytes": 105724,
+      "sha256": "15648f95d92c0311064f80981d96c83aba1d16f94ecfd35c89a1a985606e3c27",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/ceiling_wide_a.png": {
+      "bytes": 86178,
+      "sha256": "032f92f377682a9f3090ed841b37ead9c7122aef0a5f75f4a38ca7175c507b2d",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/skill_heal.png": {
+      "bytes": 91358,
+      "sha256": "49a95343ffce94d479a20c166c24b81068e8b6de80e88d920f3cad95381efc18",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/wall_left.png": {
+      "bytes": 131802,
+      "sha256": "424e1179b273f9122bedcf2398538281af27e350ac0f7422ce8f94d1eff74016",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/stalagmite_tall_b.png": {
+      "bytes": 67259,
+      "sha256": "02450b42c3681ff201e38d4096e81e4805b004007a932d4d07259308110b576a",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/hud_frame.png": {
+      "bytes": 332199,
+      "sha256": "ccd34377b3a353aee382263967644f3081bf5098bc17d66f984dbed26955ebe0",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/button_stone.png": {
+      "bytes": 65006,
+      "sha256": "c5a6f871def675efa9f65fd985ff095dbb670e4181d11f83bd0f9fa51473c3e1",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/rocks_decor_c.png": {
+      "bytes": 78562,
+      "sha256": "61a583e5c6bdf00dd206cb113286941c71a6773a1df88cead02364e6cbf383bb",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/ceiling_ledge_b.png": {
+      "bytes": 104599,
+      "sha256": "e204366f602256c6dfe4c3c5cad955cdd34f5f1067cb5da8314a6d8d28d00939",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/meter_active.png": {
+      "bytes": 73533,
+      "sha256": "fa452d0aeb32fac2c35a5c99c031af1c96d76d5740dab190d62a3e3c27db1eeb",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/magnet_emblem.png": {
+      "bytes": 121652,
+      "sha256": "fa31185e7b73190a58fbdb0084930c0ab1f19593eeae74773989dac728514eb2",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/bandage.png": {
+      "bytes": 99733,
+      "sha256": "7e3614a9451afee86ff1c03972cdd11c2ea4895dcc3eb41960c81d63d5f70847",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/cave_v2/pebbles_small_a.png": {
+      "bytes": 45157,
+      "sha256": "8f14d3bb307830ffcf8e9948a8353fcae484c61bb464757ce30f178610842adc",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/approved/combat_fx_1.png": {
+      "bytes": 5668,
+      "sha256": "f7237f7b07ed92684944d42b16f855a660fa554846368bdcc236e4d173a6c7e7",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/approved/skill_icons_2.png": {
+      "bytes": 9465,
+      "sha256": "c2a01c8f3325d1f539eceb68b8a6138ec22cbf15bed2e2cbf525f217656f1758",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/approved/cave_formations_0.png": {
+      "bytes": 4346,
+      "sha256": "72a70b4ebb8f08db2e168866b6bd4d48588176d53a0fa339680270e70d4dd3d7",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/approved/cave_formations_2.png": {
+      "bytes": 5664,
+      "sha256": "62fe64a42f4e735c144d6d1822018a6e7f6ad7a00aaf0418a59db924a0295c29",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/approved/hero.png": {
+      "bytes": 304261,
+      "sha256": "c24673224e0f202a51afea36f0cc4d84a986108489ad8b5090ac63305ac784d0",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/approved/cave_formations_1.png": {
+      "bytes": 4638,
+      "sha256": "34b5184b635c357174027252608956ee1757b6f132350843c2878ae6e505d00b",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/approved/knight.png": {
+      "bytes": 301291,
+      "sha256": "521d1f580d322926ce6e225d1df883d034e91c75a6d192db1a6ecdaf6dcd9fce",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/approved/cave_formations_3.png": {
+      "bytes": 3928,
+      "sha256": "b2f4af1ea720fa4ac7777fc4e19bd55601c0b336f486db4201e1208f434c617a",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/approved/combat_fx_2.png": {
+      "bytes": 4111,
+      "sha256": "433d1c5b00a5a3efd80396b01f86614e807b8a4bbbfbb728be817925c752fc00",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/approved/coins_1.png": {
+      "bytes": 5356,
+      "sha256": "b2553110375a76a25a61216c88e2fa53935159f5ce90095e4ca1ba5a4a6a2d28",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/approved/coins_0.png": {
+      "bytes": 5804,
+      "sha256": "001bc34b165239411b30367250fe1dfaf79d2688bfb5d6accf561a22845742f8",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/approved/combat_fx_0.png": {
+      "bytes": 5877,
+      "sha256": "4bf55662d8e9b2af5401774cdf5ad0922aff839f69f8bda300c4f67df01e2c2d",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/approved/combat_fx_3.png": {
+      "bytes": 4963,
+      "sha256": "9e1126b37f185cc3327685cafe8ae9c87ec6529e1f62b5b7264d60c9df8d0450",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/approved/skill_icons_0.png": {
+      "bytes": 8379,
+      "sha256": "c7d83f8bc1663e67b838ee69e20c330aa55bc8fce1224f8772bb3b4d1d4827ff",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/approved/rocks_3.png": {
+      "bytes": 4365,
+      "sha256": "3bb6c1fe76c70ab02a5e95d2122df81772a00d809f6d749ad8c7bd12c9cfa2be",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/approved/skill_icons_3.png": {
+      "bytes": 9643,
+      "sha256": "fe01c10df7282f75a18926e29ef7acdb1ccb18bfb1669a72330db729db155088",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/approved/treasure_3.png": {
+      "bytes": 1116,
+      "sha256": "bcc8a3c02d00e5393a172196eac86a2255c6565975ea748ba00a5eb17f6b7374",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/approved/rocks_0.png": {
+      "bytes": 2773,
+      "sha256": "212268177bc83a6b935bfc6dbd3611e622f7d943a3990f1b65439361693676e2",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/approved/treasure_1.png": {
+      "bytes": 954,
+      "sha256": "f049eb9b2f3c377676c0d39f77109e70195c7516caa500151882f92576f619ba",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/approved/rocks_1.png": {
+      "bytes": 5711,
+      "sha256": "7e983b6dd693c0d9d06f7ef8210f56ce3faf3bba8f04b2b3158034d84fb61164",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/approved/treasure_2.png": {
+      "bytes": 1053,
+      "sha256": "73e6ce97da6b820437928fd080dae274eb8ffcede464a103654d908388bd0473",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/approved/coins_2.png": {
+      "bytes": 2899,
+      "sha256": "cf6a4e22b35038956e8bb1fd1a0b15ecdcdd8f05fc71a75a045ba3b0fc80ea7b",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/approved/rocks_2.png": {
+      "bytes": 5070,
+      "sha256": "7221f45ea252f01c602a85e04781d8fdc5a262749a4b029ffa14c490457c0957",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/approved/coins_3.png": {
+      "bytes": 5631,
+      "sha256": "ef410bc7af69537a93c239b0af6bc9f7d7ae37eebaa5cb7590dfd49fa9cb8422",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/approved/treasure_0.png": {
+      "bytes": 653,
+      "sha256": "8b108ec24018e149565a681670ced4bf35032c206912a94f17b49432ecef4be3",
+      "source": "recovered gameplay APK"
+    },
+    "assets/recovered/production/approved/skill_icons_1.png": {
+      "bytes": 9957,
+      "sha256": "4b7f39d1d594fc0df58083a4cb5ef1f4d7dbfd032807744d5756f4718d1ad744",
+      "source": "recovered gameplay APK"
+    },
+    "assets/hero_approved/goblin_attack_9fps.gif": {
+      "bytes": 163464,
+      "sha256": "04f06b982f751f2275a32d37f4ffe9fd9d54bcd6de8587abfa0319c26d786acc",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/animation_manifest.json": {
+      "bytes": 2031,
+      "sha256": "547d1cd4f675fb610ecf41774273a635a9ad65ef1feab2ee66dce68c46325f7e",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/goblin_run_8fps.gif": {
+      "bytes": 374283,
+      "sha256": "be1bc3b3ee2f3398ab8226f77a52ba5cb712ceced0e58983d26791bee658d584",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/goblin_run_attack_atlas_rgba.png": {
+      "bytes": 954134,
+      "sha256": "ee2dd6a4c246d50118afa2bbb48144ab687e8a3edf2b51d75baa1ddf20797977",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/goblin_run_attack_combo.gif": {
+      "bytes": 664944,
+      "sha256": "aa567539eccf39d338ad3a37788d0ec9e1eb52fa2d4e0347f5c1127e323afb6e",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/run_17.png": {
+      "bytes": 25086,
+      "sha256": "27771db8d746df409dcc0a882b5bcc2153743f3c3a22add7050717c1bbaaf4d6",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/run_11.png": {
+      "bytes": 23572,
+      "sha256": "069aac9d00a83c07e60206415fdc7628e1d04795c904d5b1ebb2e74d11134864",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/run_20.png": {
+      "bytes": 27022,
+      "sha256": "ed4234b280206b6886bddfab5f46b5f67b28ffa21fd4aa32a35fb72ec573d1a2",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/run_08.png": {
+      "bytes": 21190,
+      "sha256": "aa78c756a3590a8b21aa7b6c1405852475feba86c9a2e0855d0a21fd2794fa67",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/run_00.png": {
+      "bytes": 30236,
+      "sha256": "5d40f04f3c02fdf22714c8ede9ae77354e5b2cbd66443fa6ada2e1a7da9164f9",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/run_22.png": {
+      "bytes": 24588,
+      "sha256": "5782ec0afc973be796da58d24bc1d3d88d23fc4b0f2ece65eda1f97333c4e0cd",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/run_12.png": {
+      "bytes": 29166,
+      "sha256": "41f39d86c7acf695371f9e98fc05436962b0bbe16d83f52491a284dde38d915c",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/attack_00.png": {
+      "bytes": 28109,
+      "sha256": "8240b28a390f4816655daf9f7f1cf62330555ee7e82e61f0b699fec0e39f1ff9",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/run_01.png": {
+      "bytes": 28706,
+      "sha256": "8ff5b7a8631e72f6c34aed10cf15e0727fcb5c33d676838b53d021936208c798",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/run_14.png": {
+      "bytes": 24854,
+      "sha256": "64822c8c6e7128cfa5816bb2e8b89ffecc5323bbaf95d0cbd45f512fc83f0f54",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/run_07.png": {
+      "bytes": 26665,
+      "sha256": "b85cbe2048e770490460c06f00fba44978a0ee3c075804e145e21dcf1a5c739a",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/attack_06.png": {
+      "bytes": 35771,
+      "sha256": "543a376a81ce5257f72d015cd246a659bdbcbee8877fbbb0fe425d04cd3dbd77",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/run_18.png": {
+      "bytes": 29263,
+      "sha256": "1602c2c04ad72f94a6b3a6b87cfe4ec788f3d9e77672849e13edec05b2f39995",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/attack_04.png": {
+      "bytes": 43744,
+      "sha256": "82854c2cce0229e685fe7352954c360a0101729ba4b587e2a4a81b5ddd67f041",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/run_21.png": {
+      "bytes": 29196,
+      "sha256": "b508d0cc6f00f41069f2a9e615c042bcea7352338831d3ec23279fc12aab7a3f",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/run_04.png": {
+      "bytes": 28338,
+      "sha256": "7150ef00ab7b1a1ced66f59466b8a6ebee5af7effc1954f5dc748e168521012d",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/run_03.png": {
+      "bytes": 28278,
+      "sha256": "02eeef13c536ca023988648093982061d8e18cb1dba592f22839e74e6b5ee601",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/run_15.png": {
+      "bytes": 29429,
+      "sha256": "25c31e13053d376f899461520d35e63b88578ddc34dac2eac09d8f99d0d173dc",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/run_02.png": {
+      "bytes": 21270,
+      "sha256": "8157a74342176a4ef3a48b65fe95fecbc0944cc8830e13b1c60841c9539e214d",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/attack_08.png": {
+      "bytes": 33434,
+      "sha256": "9f6dd027359e3ad26bc43fa4cc593b2cb525be8780df7aea4db31ac9ba632e19",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/attack_07.png": {
+      "bytes": 45161,
+      "sha256": "c1a58cf5fd3224b18c34c0ecac4b3d0a558f01a1699fb0386570de22f028d07d",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/attack_09.png": {
+      "bytes": 29587,
+      "sha256": "0da1af45d4dbed25e6d6bd6a47e8d5890ae947a684ca370da3a5d7ea0abbb0dd",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/attack_01.png": {
+      "bytes": 28316,
+      "sha256": "7d8f534a2a4efdc41569186822e6b0da3b1e555c384c2b0d993157d205dc8d41",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/run_16.png": {
+      "bytes": 22742,
+      "sha256": "4c0d95b531724fa1a8699bde833acb8d11f5133782b849614e74be32e8d79435",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/attack_03.png": {
+      "bytes": 34388,
+      "sha256": "68fa0ee35875c91a62f6f115a5c0f6f9ea08dceb2df29bec270676154376cc53",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/run_10.png": {
+      "bytes": 25273,
+      "sha256": "c0c38c88fcb3ba19c3b4ac5b8b7e441a4041bc9755028852c443229ee1e2dafc",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/run_23.png": {
+      "bytes": 26569,
+      "sha256": "e2b47a0154f126f0f6763f8eb0d840e2a2a5205973c0daf6ff4e46645f01c23c",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/run_06.png": {
+      "bytes": 29324,
+      "sha256": "967a4a9b982d1e85d6c7169dae6f9f8896d69209cd23dfce9b65cef7db3b142d",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/run_09.png": {
+      "bytes": 29439,
+      "sha256": "f7fb917c2c3ba1e1696da3657403c2656528ad92b9dea07af78e22e75f64e45c",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/attack_02.png": {
+      "bytes": 37382,
+      "sha256": "9c805b110c049d64f30486e55c117814ec51da0f08412bb575300966fd4fa934",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/run_19.png": {
+      "bytes": 21271,
+      "sha256": "50151d02d20085e3dbd1e482c606b7d608e795ee45368f6c9fa9f77bef52747f",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/run_05.png": {
+      "bytes": 21673,
+      "sha256": "6d55d608a1966348f087ca53022a77fd296d69c4d55a7e7ce932e4ae6fc9b03f",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/attack_05.png": {
+      "bytes": 29450,
+      "sha256": "b967c488e62acc274e9ebc9ad61d64886ef789f6530d3576fa4c635287b51dde",
+      "source": "approved hero original"
+    },
+    "assets/hero_approved/frames/run_13.png": {
+      "bytes": 23466,
+      "sha256": "e5adfde71d4f62909206b4a1bce0cc7d1353a7f8a39687df910bdbd31b4e9e14",
+      "source": "approved hero original"
+    },
+    "assets/knight_approved/attack_1.png": {
+      "bytes": 183709,
+      "sha256": "2a02de167d3fa6054587b6a384e0a900ec69b21428353bbcd931143bff8e18a7",
+      "source": "approved knight original"
+    },
+    "assets/knight_approved/attack_2.png": {
+      "bytes": 210951,
+      "sha256": "20cd0e7ce19c3ffef5d854823a603d6384eae9c55a52799570a78c3d0c6d4657",
+      "source": "approved knight original"
+    },
+    "assets/knight_approved/knight_3x2.png": {
+      "bytes": 929901,
+      "sha256": "c60bb2dfadf0ef0010b44caafe3e17e64a24f4e03a85cb2e9d61e12a51baac91",
+      "source": "approved knight original"
+    },
+    "assets/knight_approved/knight_attack_left.gif": {
+      "bytes": 145221,
+      "sha256": "3b031b6774d8b6a2ed483fc926e957ef5bbdaf38e68c92767d0bedfd22b02488",
+      "source": "approved knight original"
+    },
+    "assets/knight_approved/knight_run_left.gif": {
+      "bytes": 196465,
+      "sha256": "74d9dbcf68c367e3996e3903b4407acea63f6f2cf905016caf8b0205292c89ea",
+      "source": "approved knight original"
+    },
+    "assets/knight_approved/run_1.png": {
+      "bytes": 176566,
+      "sha256": "3f5bab82072266a172038a37f9c6391212946d63b0a9bac8bbf9e7fa05154f2e",
+      "source": "approved knight original"
+    },
+    "assets/knight_approved/run_2.png": {
+      "bytes": 172060,
+      "sha256": "c9dd1a07807648dcf0cfb09b04c72c767663aa912c3ac30d3ff426519906a006",
+      "source": "approved knight original"
+    },
+    "assets/knight_approved/run_3.png": {
+      "bytes": 181228,
+      "sha256": "b3086f09e57a2d6c582624a1b47b3fa0d92f1ed71be14fc28613ac250f225ed7",
+      "source": "approved knight original"
+    },
+    "references/hero_concept.png": {
+      "bytes": 2366344,
+      "sha256": "559f08dcd51c0a5b8f05cdb54692cc094b8bafed298c6f1a15a9746dfc6c0169",
+      "source": "character style reference"
+    },
+    "references/1000009815(1).jpg": {
+      "bytes": 306413,
+      "sha256": "b2cf8dd5edec7dd36f7720554c289602bdd236283df734057e0d37ab069c68ec",
+      "source": "user gameplay / motion reference"
+    },
+    "references/1000009807(1).jpg": {
+      "bytes": 238232,
+      "sha256": "254de52d25e8f2d9670d13ab7ba76fb6245eecf57decaef00ed28e9d9eb15e76",
+      "source": "user gameplay / motion reference"
+    },
+    "references/1000009824.jpg": {
+      "bytes": 165341,
+      "sha256": "d0b35c20ed9a8f2f563c2072398a1c5da5df55ce1a577002957ed462001b7530",
+      "source": "user gameplay / motion reference"
+    }
+  },
+  "fps": {
+    "hero_run": 8,
+    "hero_attack": 9,
+    "knight_run": 6,
+    "knight_attack": 6
+  },
+  "notes": "Do NOT use compiled .gdc. Original hero sprite sheets take priority. Transparent PNG preserve alpha. New game is not Godot APK."
+}

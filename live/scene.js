@@ -1,0 +1,57 @@
+'use strict';
+window.LIB={ONLY:[]};
+const $=id=>document.getElementById(id),V=SIM.VIEW;
+let S=SIM.create(),started=false,held=false,press=false,furyPress=false,last=0,acc=0,menu='',bank=0,passive=0,wins=0,audio=null;
+try{bank=Number(localStorage.getItem('ggr.bank'))||0;passive=Number(localStorage.getItem('ggr.passive'))||0;wins=Number(localStorage.getItem('ggr.wins'))||0;}catch{}
+function sound(type){if(!audio)return;const o=audio.createOscillator(),g=audio.createGain();o.connect(g);g.connect(audio.destination);o.type=type==='hit'?'sawtooth':'sine';o.frequency.setValueAtTime(type==='coin'?880:type==='jump'?280:120,audio.currentTime);o.frequency.exponentialRampToValueAtTime(type==='coin'?1320:50,audio.currentTime+.12);g.gain.setValueAtTime(.04,audio.currentTime);g.gain.exponentialRampToValueAtTime(.001,audio.currentTime+.15);o.start();o.stop(audio.currentTime+.16);}
+G.init($('c'),960,540);
+const P=G.program('art','uniform sampler2D u_tex; uniform vec4 u_color; void main(){o=texture(u_tex,v_uv)*u_color;}');
+const B=G.program('solid','uniform vec4 u_color; void main(){o=u_color;}');
+function rect(x,y,w,h,c){G.draw(B,{u_color:c},G.xf(x,y,w,h));}
+function sprite(n,x,y,w,h,brightness=1,alpha=1){if(LIB.ONLY.length&&!LIB.ONLY.includes(n))return;G.draw(P,{u_tex:G.tex(n),u_color:[brightness*alpha,brightness*alpha,brightness*alpha,alpha]},G.xf(Math.round(x),Math.round(y),w,h));}
+function prop(n,x,bottom,h,b=1){const a=ASSETS[n].size;sprite(n,x,bottom-h,h*a[0]/a[1],h,b);}
+function hero(s){const name=s.attack>=0?'hero_attack_'+String(Math.min(9,Math.floor(s.attack*9))).padStart(2,'0'):'hero_run_'+String(Math.floor(s.t*8)%24).padStart(2,'0');const a=ASSETS[name],scale=.9; sprite(name,s.x-s.cam-144*scale,s.y-a.sourceBounds[3]*scale,288*scale,288*scale,1,s.inv>0&&Math.floor(s.t*14)%2?.55:1);}
+function enemy(s,e){if(e.boss&&!e.dead&&e.slam>2.75){rect(e.x-s.cam-230,447,460,3,[.9,.3,.12,1]);}const n='knight_'+(e.pressure>0?'attack_'+(Math.floor(s.t*6)%2+1):'run_'+(Math.floor(s.t*6)%3+1));const a=ASSETS[n],sc=e.boss?.43:.32;let alpha=e.dead?Math.max(0,1-(s.t-e.dead)/.65):1;sprite(n,e.x-s.cam-400*sc,e.y-a.sourceBounds[3]*sc+(e.dead?(s.t-e.dead)*55:0),768*sc,768*sc,1,alpha);if(!e.dead&&e.hp<e.maxHp){rect(e.x-s.cam-27,e.y-(e.boss?175:130),54,4,[.14,.1,.12,1]);rect(e.x-s.cam-27,e.y-(e.boss?175:130),54*e.hp/e.maxHp,4,[.8,.25,.18,1]);}}
+function render(t){const s=SCENE.state||S,cam=s.cam;G.bind(null,[.055,.06,.095,1]);G.blend();
+ // Permanent world-indexed scenery. Each depth band has a fixed parallax ratio.
+ for(let i=Math.floor(cam*.18/960);i<=Math.floor(cam*.18/960)+1;i++)sprite('cave_wall',i*960-cam*.18,63,962,400,.48);
+ for(let layer=0;layer<2;layer++){let rate=layer?.48:.29,spacing=layer?380:520;
+ for(let i=Math.floor(cam*rate/spacing)-1;i<Math.floor((cam*rate+960)/spacing)+1;i++){const x=i*spacing-cam*rate;prop(i%2?'stalagmite_tall_a':'stalagmite_wide_a',x,470,layer?230:320,layer?.55:.3);}}
+ for(let i=Math.floor(cam*.65/320)-1;i<Math.floor((cam*.65+960)/320)+1;i++)prop(i%2?'ceiling_sharp_b':'ceiling_wide_a',i*320-cam*.65,156+(i%3)*15,110,.65);
+ for(let i=Math.floor(cam/440)-1;i<Math.floor((cam+960)/440)+1;i++){prop(i%3?'rocks_crystal_blue':'rocks_lantern',i*440+100-cam,459,80,.83);}
+ for(const p of SIM.LEVEL.platforms){if(p.x-cam>1100||p.x+p.w-cam< -100)continue;const n=p.kind==='arch'?'cave_arch':'rocks_pillar';sprite(n,p.x-cam,p.y,p.w,465-p.y);sprite('ceiling_ledge_a',p.x-10-cam,p.y-3,p.w+20,34);}
+ for(const h of SIM.LEVEL.spikes){if(h.x-cam>1000||h.x+h.w-cam<0)continue;for(let x=h.x;x<h.x+h.w;x+=65)sprite('rocks_spikes',x-cam,422,72,36);}
+ // Floor covers the buried bottoms of formations.
+ rect(0,450,960,90,[.13,.12,.16,1]);rect(0,450,960,4,[.43,.38,.3,1]);
+ for(let i=Math.floor(cam/100);i<Math.floor((cam+960)/100)+1;i++)prop('rocks_decor_a',i*100+Math.sin(i*19)*25-cam,455,12+(i%3)*3,.65);
+ for(const c of s.coins)if(!c.taken&&c.x-cam> -30&&c.x-cam<990){sprite('coin_front',c.x-cam-10,c.y-14+Math.sin(t*3+c.x)*2,20,28);}
+ if(s.x>SIM.LEVEL.length-900)prop('treasure_chest',SIM.LEVEL.length-180-cam,450,65);
+ for(const e of s.enemies)if(e.x-cam> -200&&e.x-cam<1150&&(!e.dead||s.t-e.dead<.65))enemy(s,e);
+ hero(s);
+ for(const e of s.ev){let age=s.t-e.t;if(age<0)continue;for(let i=0;i<9;i++){const ang=i*2.399,dist=age*(65+i*13),x=e.x-cam+Math.cos(ang)*dist,y=e.y+Math.sin(ang)*dist+age*age*110;let a=Math.max(0,1-age/.7);rect(x,y,3+i%3,3,e.type==='poison'?[.4*a,.85*a,.2*a,a]:[a,.65*a,.22*a,a]);}}
+ for(let i=0;i<24;i++){const x=((i*137-cam*.7+t*5)%1000+1000)%1000,y=100+(i*71)%300+Math.sin(t+i)*9;rect(x,y,1.5,1.5,[.25,.23,.18,.3]);}
+ if(s.rage) {rect(0,65,3,385,[.9,.3,.1,1]);rect(957,65,3,385,[.9,.3,.1,1]);}
+ hud(s);window.__ANCHORS=s.ev.filter(e=>s.t-e.t<.05).map(e=>({name:e.type,sim:[e.x-cam,e.y],drawn:[e.x-cam,e.y],tol:1,d:0}));
+ window.__UI=[];for(const el of document.querySelectorAll('header,footer,#boss,#notice')){if(!el.textContent.trim())continue;const r=el.getBoundingClientRect(),g=$('game').getBoundingClientRect();let x=(r.x-g.x)/g.width*960,y=(r.y-g.y)/g.height*540;window.__UI.push({k:'box',id:el.id,x,y,w:r.width/g.width*960,h:r.height/g.height*540,pad:0});
+ const walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);while(walker.nextNode()){const node=walker.currentNode;if(!node.textContent.trim())continue;const range=document.createRange();range.selectNodeContents(node);const q=range.getBoundingClientRect();if(!q.width)continue;window.__UI.push({k:'text',id:el.id+'-text',s:node.textContent,x:(q.x-g.x)/g.width*960,y:(q.y-g.y)/g.height*540,w:q.width/g.width*960,h:q.height/g.height*540});}}
+}
+function hud(s){$('health').textContent='♥ '+Math.ceil(s.hp);$('hpbar').style.width=s.hp/s.maxHp*100+'%';$('gold').textContent='◈ '+s.gold;$('build').textContent=(s.path?names[s.path]:'ТЕСАК')+' · '+(s.ranks>=3?'ЭВОЛЮЦИЯ':('УР. '+(s.lv+1)));$('progress').style.width=s.x/SIM.LEVEL.length*100+'%';$('charge').textContent=s.rage?'АКТИВНА':Math.floor(s.fury)+'%';$('fury').classList.toggle('ready',s.fury>=100||s.rage>0);$('xp').textContent='XP '+Math.floor(s.xp)+' / '+(s.lv+1)*5;$('notice').textContent=s.noticeTime>0?s.notice:s.clash?'CLASH · ПРЫЖОК РАЗРЫВАЕТ СХВАТКУ':'';let boss=s.enemies.find(e=>e.boss&&!e.dead&&Math.abs(e.x-s.x)<600);$('boss').innerHTML=boss?['','ХРАНИТЕЛЬ ВХОДА','СТРАЖ ГЛУБИН','КОРОЛЬ ПЕПЛА'][boss.boss]+'<div class="meter"><i style="width:'+boss.hp/boss.maxHp*100+'%"></i></div>':'';}
+const names={butcher:'МЯСНИК',hunter:'ОХОТНИК',plague:'ЧУМНОЙ КЛИНОК'},icons={butcher:'skill_blades',hunter:'skill_bleed',plague:'skill_heal'};
+function showMenu(kind){if(menu===kind)return;menu=kind;const modal=$('modal');$('overlay').hidden=!kind;if(!kind)return;
+ if(kind==='title'){modal.innerHTML='<div class="eyebrow">КАМЕНЬ. ЗОЛОТО. ЯРОСТЬ.</div><h1>GOBLIN<br>GOLD RUSH</h1><p>Пепельная жила · Глава I<br>Прыгайте по колоннам. Пробивайте строй. Заберите сокровище.</p><button class="action" id="start">ВОЙТИ В ПЕЩЕРУ</button><p id="meta">Постоянное золото: '+bank+' · Пассивная сила: '+passive+(wins?' · Навык: +30% ярости на старте':'')+'</p>'+(bank>=80?'<button class="action" id="buy">+10 здоровья и +2 урона · 80 золота</button>':'');$('start').onclick=start;if($('buy'))$('buy').onclick=()=>{bank-=80;passive++;save();menu='';showMenu('title');};}
+ if(kind==='upgrade'){let paths=S.path?[S.path]:Object.keys(names);modal.innerHTML='<div class="eyebrow">ПЕРЕДЫШКА · ИГРА ПРИОСТАНОВЛЕНА</div><h2>'+(S.path?'Усиление оружия':'Выберите путь оружия')+'</h2><div class="cards">'+paths.map(p=>'<button class="card" data-path="'+p+'"><img src="assets/'+icons[p]+'.png"><h3>'+names[p]+'</h3><p>'+({butcher:'Бьёт всю группу. Слабее против одной цели.<br>III: Мясорубка',hunter:'Высокий урон, пробивание и добивание.<br>Только одна цель.',plague:'Яд и взрыв на третьем заряде.<br>Медленный первый удар.'}[p])+'</p><p>+5 урона · +20 здоровья</p></button>').join('')+'</div>';modal.querySelectorAll('[data-path]').forEach(b=>b.onclick=()=>{SIM.upgrade(S,b.dataset.path);held=false;showMenu('');});}
+ if(kind==='dead'||kind==='win'){modal.innerHTML='<div class="eyebrow">'+(kind==='win'?'СОКРОВИЩЕ ВАШЕ':'ПЕЩЕРА ПОМНИТ')+'</div><h2>'+(kind==='win'?'Победа в Пепельной жиле':'Ещё один набег')+'</h2><p>Золото: '+S.gold+' · Побеждено: '+S.kills+' · Стражи: '+S.bossKills+'<br>'+(kind==='win'?'Награда сохранена. Усильте следующий набег.':'Держите прыжок перед колоннами; ярость поможет в схватке.')+'</p><button id="again" class="action">К КОСТРУ</button>';$('again').onclick=()=>{started=false;showMenu('title');};}
+ if(kind==='pause'){modal.innerHTML='<h2>Передышка</h2><p>Тап / пробел — прыжок · удержание — выше<br>Ярость / F — усиление · Esc — пауза</p><button id="resume" class="action">ПРОДОЛЖИТЬ</button>';$('resume').onclick=()=>{S.mode='play';showMenu('');};}
+}
+function save(){try{localStorage.setItem('ggr.bank',bank);localStorage.setItem('ggr.passive',passive);localStorage.setItem('ggr.wins',wins);}catch{}}
+function start(){try{audio=audio||new(window.AudioContext||window.webkitAudioContext)();audio.resume();}catch{}S=SIM.create(passive);if(wins>0)S.fury=30;SCENE.state=S;started=true;held=false;press=false;showMenu('');}
+$('c').addEventListener('pointerdown',e=>{e.preventDefault();if(!started||S.mode!=='play')return;held=true;press=true;$('c').setPointerCapture(e.pointerId);});
+window.addEventListener('pointerup',()=>held=false);window.addEventListener('pointercancel',()=>held=false);window.addEventListener('blur',()=>{held=false;if(started&&S.mode==='play'){S.mode='pause';showMenu('pause');}});
+$('fury').addEventListener('pointerdown',e=>{e.preventDefault();e.stopPropagation();SIM.rage(S);});
+$('pause').onclick=()=>{if(started&&S.mode==='play'){S.mode='pause';held=false;showMenu('pause');}};
+window.addEventListener('keydown',e=>{if(e.code==='Space'){e.preventDefault();if(!e.repeat){press=true;held=true;}}if(e.code==='KeyF')SIM.rage(S);if(e.code==='Escape')$('pause').click();});window.addEventListener('keyup',e=>{if(e.code==='Space')held=false;});
+window.SCENE={state:S,render,QA(){let s=SIM.create();s.mode='play';return {states:[['match',s],['clash',{...SIM.create(),clash:1,attack:.5}],['fury',{...SIM.create(),fury:100}],['late',{...SIM.create(),x:8100,cam:7800,gold:99999}]],cycles:{hero:Array.from({length:8},(_,i)=>({...SIM.create(),t:i/8})),knight:Array.from({length:3},(_,i)=>({...SIM.create(),t:i/6,enemies:[{...SIM.create().enemies[0],x:450}]}))},box:n=>n==='hero'?[0,270,280,185]:[320,270,250,185],sprites:{hero:Object.keys(ASSETS).filter(n=>n.startsWith('hero_')),knight:Object.keys(ASSETS).filter(n=>n.startsWith('knight_'))}};}};
+window.GAME={get state(){return S},start,upgrade:p=>SIM.upgrade(S,p),setState:s=>{S=s;SCENE.state=s;},render};
+Promise.all(Object.entries(ASSETS).map(([n,a])=>G.load(n,a.file,{nearest:true}))).then(()=>{window.__ready=true;showMenu(new URLSearchParams(location.search).has('render')?'':'title');requestAnimationFrame(loop);}).catch(e=>{$('modal').textContent='Ошибка загрузки: '+e.message;console.error(e);});
+function loop(now){let dt=Math.min(.05,(now-last)/1000||0);last=now;acc+=dt;
+ if(!new URLSearchParams(location.search).has('render')){while(acc>=SIM.DT){if(started){let before=S.ev.length;SIM.step(S,{press,hold:held});press=false;if(S.ev.length>before)sound(S.ev.at(-1).type);if(S.mode==='win'&&!S.rewarded){S.rewarded=true;bank+=S.gold;wins++;save();}if(S.mode!=='play')showMenu(S.mode);}acc-=SIM.DT;}SCENE.state=S;render(S.t);}requestAnimationFrame(loop);}

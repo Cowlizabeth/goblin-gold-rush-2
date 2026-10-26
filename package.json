@@ -1,0 +1,1 @@
+{"name":"goblin-gold-rush-2","version":"2.0.0","private":true,"description":"Finite original cave platformer, WebGL2 and approved frame animation","scripts":{"test":"node tests/sim.cjs && python3 tests/animation.py && node tests/browser.cjs","serve":"python3 -m http.server 8000 --bind 0.0.0.0"},"devDependencies":{"playwright":"1.62.1"}}

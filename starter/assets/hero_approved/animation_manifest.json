@@ -1,0 +1,81 @@
+{
+  "source_run": "Йй-run-trimmed.png",
+  "source_attack": "Йй-asm_dagger_blade_flurry.png",
+  "method": "crop only, center on torso, align boots; attack source uniformly scaled 1.63x",
+  "canvas": [
+    288,
+    288
+  ],
+  "atlas": {
+    "file": "goblin_run_attack_atlas_rgba.png",
+    "columns": 4,
+    "rows": 9,
+    "cell_width": 288,
+    "cell_height": 288
+  },
+  "animations": {
+    "run_right": {
+      "fps": 8,
+      "loop": true,
+      "frames": [
+        "frames/run_00.png",
+        "frames/run_01.png",
+        "frames/run_02.png",
+        "frames/run_03.png",
+        "frames/run_04.png",
+        "frames/run_05.png",
+        "frames/run_06.png",
+        "frames/run_07.png",
+        "frames/run_08.png",
+        "frames/run_09.png",
+        "frames/run_10.png",
+        "frames/run_11.png",
+        "frames/run_12.png",
+        "frames/run_13.png",
+        "frames/run_14.png",
+        "frames/run_15.png",
+        "frames/run_16.png",
+        "frames/run_17.png",
+        "frames/run_18.png",
+        "frames/run_19.png",
+        "frames/run_20.png",
+        "frames/run_21.png",
+        "frames/run_22.png",
+        "frames/run_23.png"
+      ],
+      "atlas_start": 0,
+      "count": 24
+    },
+    "attack_right": {
+      "fps": 9,
+      "loop": false,
+      "frames": [
+        "frames/attack_00.png",
+        "frames/attack_01.png",
+        "frames/attack_02.png",
+        "frames/attack_03.png",
+        "frames/attack_04.png",
+        "frames/attack_05.png",
+        "frames/attack_06.png",
+        "frames/attack_07.png",
+        "frames/attack_08.png",
+        "frames/attack_09.png"
+      ],
+      "original_indices": [
+        0,
+        3,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        17,
+        19
+      ],
+      "atlas_start": 24,
+      "count": 10
+    }
+  },
+  "in_game": "Play run_right continuously. When strike starts, play attack_right once, then return to run_right. Attack hit occurs on attack animation frames 4-7. Do not keep replaying attack each frame."
+}

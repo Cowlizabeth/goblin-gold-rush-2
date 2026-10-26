@@ -1,0 +1,37 @@
+{
+ "states": {
+  "match": {
+   "ui": 17,
+   "anchors": []
+  },
+  "clash": {
+   "ui": 19,
+   "anchors": []
+  },
+  "fury": {
+   "ui": 17,
+   "anchors": []
+  },
+  "late": {
+   "ui": 19,
+   "anchors": []
+  }
+ },
+ "cycles": {
+  "hero": {
+   "legs": 0.874,
+   "body": 0.599,
+   "masked": true
+  },
+  "knight": {
+   "legs": 0.841,
+   "body": 0.645,
+   "masked": true
+  }
+ },
+ "fails": [
+  "hero: limbs barely move over the walk cycle (lower body 87.4% changed vs upper 59.9%, aligned on the upper body) — a sliding sprite: rig it (references/animation.md)",
+  "knight: limbs barely move over the walk cycle (lower body 84.1% changed vs upper 64.5%, aligned on the upper body) — a sliding sprite: rig it (references/animation.md)"
+ ],
+ "warns": []
+}

@@ -1,0 +1,26 @@
+{
+  "passed": 9,
+  "checks": [
+    "Browser starts and advances WebGL2 simulation",
+    "Touch Fury activates without jump; duration retained without enemies",
+    "Real touch initiates a jump",
+    "Pause freezes simulation and resumes",
+    "Upgrade overlay freezes scene; choice is applied",
+    "Browser replay defeats all 3 bosses and saves victory reward",
+    "Permanent upgrade and unlocked starting Fury apply to next run",
+    "844×390 touch viewport keeps 16:9 and HUD outside hazards",
+    "Mobile upgrade cards fit viewport without overflow"
+  ],
+  "errors": [],
+  "replay": {
+    "mode": "win",
+    "bosses": 3,
+    "time": 185.21666666666255,
+    "gold": 672
+  },
+  "viewport": [
+    844,
+    390
+  ],
+  "physicalAndroidTested": false
+}

@@ -1,0 +1,1 @@
+const p=require('playwright');module.exports={...p,chromium:{...p.chromium,launch:opts=>p.chromium.launch({...opts,executablePath:process.env.CHROMIUM_PATH||(require('fs').existsSync('/usr/bin/chromium')?'/usr/bin/chromium':undefined),args:['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader']})}};

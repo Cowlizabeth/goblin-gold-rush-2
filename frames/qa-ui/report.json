@@ -1,0 +1,23 @@
+{
+ "states": {
+  "match": {
+   "ui": 17,
+   "anchors": []
+  },
+  "clash": {
+   "ui": 19,
+   "anchors": []
+  },
+  "fury": {
+   "ui": 17,
+   "anchors": []
+  },
+  "late": {
+   "ui": 19,
+   "anchors": []
+  }
+ },
+ "cycles": {},
+ "fails": [],
+ "warns": []
+}
